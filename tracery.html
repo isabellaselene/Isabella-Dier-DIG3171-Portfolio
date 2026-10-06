@@ -1,218 +1,197 @@
 <!DOCTYPE html>
 <html>
 	<head>
-<p> <a href="https://isabellaselene.github.io/Isabella-Dier-DIG3171-Portfolio/">Home</a>
-<p> This template was copied from <a href="https://iloveepoetry.org/creative/tracery2htmltemplate.html">Leonardo Flores's page</a> and modified for this class.</p>
-  <meta charset="UTF-8">
-  <title>{{Tracery Project: Testing Animal Stimuli }}</title>
-</head>
+		<meta charset="UTF-8">
+		<title>{{Tracery Project: Testing Animal Stimuli}}</title>
+		<style>
+		    body {
+		        display: flex;
+		        flex-direction: column;
+		        align-items: center;
+		        justify-content: flex-start;
+		        height: 100vh;
+		        font-family: Arial, sans-serif;
+		        margin: 0;
+		        padding: 0;
+		        background-color: HotPink;
+		    }
+		    
+		    #title-container {
+		        width: 100%;
+		        text-align: center;
+		        max-height: 300px;
+				font-size: 4em;
+		    }
+		    
+		    @media (max-width: 600px) {
+		        #title-container {
+		            max-height: 200px;
+		        }
+		        
+		        #text-container {
+		            width: 100%;
+		        }
+		    }
+		    
+		    #text-container {
+		        text-align: center;
+		        font-size: 1.5em;
+		        color: Black;
+		        margin: auto;
+		        border: 0px solid black;
+		        padding: 10px;
+		        width: 600px;
+		    }
+
+		    #button-container {
+		        position: fixed;
+		        bottom: 10px;
+		        left: 50%;
+		        transform: translateX(-50%);
+		        text-align: center;
+		        width: 100%;
+		    }
+		    
+		    .button {
+		        margin: 10px;
+		        font-size: 2em;
+		    }
+			
+		    .modal {
+		        display: none;
+		        position: fixed;
+		        z-index: 1;
+		        left: 0;
+		        top: 0;
+		        width: 100%;
+		        height: 100%;
+		        overflow: auto;
+		        background-color: rgb(0,0,0);
+		        background-color: rgba(0,0,0,0.4);
+		    }
+
+		    .modal-content {
+		        background-color: #fefefe;
+		        margin: 15% auto;
+		        padding: 20px;
+		        border: 1px solid #888;
+		        width: 80%;
+		        font-size: 2.5em;
+		    }
+
+		    .close {
+		        color: #aaa;
+		        float: right;
+		        font-size: 28px;
+		        font-weight: bold;
+		    }
+		</style>
+	</head>
 	<body>
+		<!-- Home link and portfolio info moved into the body -->
+		<p><a href="https://isabellaselene.github.io/Isabella-Dier-DIG3171-Portfolio/">Home</a></p>
+		<p>This template was copied from <a href="https://iloveepoetry.org/creative/tracery2htmltemplate.html">Leonardo Flores's page</a> and modified for this class.</p>
 
-
-<!--
-Tracery to HTML Template
-Copyright 2023 Leonardo Flores
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
--->
-	
-
-<style>
-    body {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-        height: 100vh;
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: HotPink;
-    }
-    
-    #title-container {
-        width: 100%;
-        text-align: center;
-        max-height: 300px;
-		font-size: 4em;
-    }
-    
-    @media (max-width: 600px) {
-        #title-container {
-            max-height: 200px;
-        }
-        
-        #text-container {
-            width: 100%;
-        }
-    }
-    
-    #text-container {
-        text-align: center;
-        font-size: 1.5em;
-        color: Black;
-        margin: auto; /* Center horizontally and vertically */
-        border: 0px solid black; /* Change 0px to your desired border thickness, if desired */
-        padding: 10px;
-        width: 600px;
-    }
-
-    /* CSS for buttons and modal */
-    #button-container {
-        position: fixed;
-        bottom: 10px;
-        left: 50%;
-        transform: translateX(-50%);
-        text-align: center;
-        width: 100%;
-    }
-    
-    .button {
-        margin: 10px;
-        font-size: 2em;
-    }
-	
-    .modal {
-        display: none; /* Hidden by default */
-        position: fixed; /* Stay in place */
-        z-index: 1; /* Sit on top */
-        left: 0;
-        top: 0;
-        width: 100%; /* Full width */
-        height: 100%; /* Full height */
-        overflow: auto; /* Enable scroll if needed */
-        background-color: rgb(0,0,0); /* Fallback color */
-        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-    }
-
-    .modal-content {
-        background-color: #fefefe;
-        margin: 15% auto; /* 15% from the top and centered */
-        padding: 20px;
-        border: 1px solid #888;
-        width: 80%; /* Could be more or less, depending on screen size */
-        font-size: 2.5em;
-    }
-
-    /* The Close Button */
-    .close {
-        color: #aaa;
-        float: right;
-        font-size: 28px;
-        font-weight: bold;
-    }
-</style>
-    </head>
-    <body>
 		<div id="title-container">Tracery Fun!</div>
 
-        <div id="text-container">This engine teach you the basics of Tracery grammar!</div>
+		<div id="text-container">This engine teaches you the basics of Tracery grammar!</div>
 
-        <div id="button-container">
-            <button class="button" onclick="displayAbout()">About</button>
-            <button class="button" onclick="displayString()">Regenerate</button>
-        </div>
+		<div id="button-container">
+		    <button class="button" onclick="displayAbout()">About</button>
+		    <button class="button" onclick="displayString()">Regenerate</button>
+		</div>
 
-        <div id="myModal" class="modal">
-            <!-- Replace the statement below with your abstract. -->
-            <div class="modal-content">
-                <span class="close">×</span>
-                <p>Abstract
-This project demonstrates animal behavioral patterns and responses within structured observational settings, drawing methodological frameworks from established ethological practices. Sentence variants examine interactions where a student observes an animal subject engaging with a toy over a specified duration (e.g., "The student watched the dog play with a ball for ten minutes"). Additionally, standardized evaluations measure behavioral states during food presentation protocols (e.g., "During the test with the carrot stick, the hamster showed high energy"). By systematically varying animal species, environmental stimuli, timeframes, and behavioral moods, this template provides a flexible framework for documenting and quantifying behavioral variability, latency, and engagement across diverse observational contexts.
-Works Cited
-Bateson, Melissa, and Paul Martin. Measuring Behaviour: An Introductory Guide. 4th ed., Cambridge University Press, 2021. https://doi.org/10.1017/9781108776462.</p> 
-            </div>
-        </div>
-    <script> /* In the var immediately below, copy-paste your Tracery/CBDQ JSON between the {} brackets */
-    var obj = {
-"origin":["#sentence1#", "#sentence2#"],
-"sentence1":["The student watched the #animal# play with a #toy# for #time#."],
+		<div id="myModal" class="modal">
+		    <div class="modal-content">
+		        <span class="close">&times;</span>
+		        <p><strong>Abstract</strong><br>
+		        This project demonstrates animal behavioral patterns and responses within structured observational settings, drawing methodological frameworks from established ethological practices. Sentence variants examine interactions where a student observes an animal subject engaging with a toy over a specified duration (e.g., "The student watched the dog play with a ball for ten minutes"). Additionally, standardized evaluations measure behavioral states during food presentation protocols (e.g., "During the test with the carrot stick, the hamster showed high energy"). By systematically varying animal species, environmental stimuli, timeframes, and behavioral moods, this template provides a flexible framework for documenting and quantifying behavioral variability, latency, and engagement across diverse observational contexts.</p>
+		        <p><strong>Works Cited</strong><br>
+		        Bateson, Melissa, and Paul Martin. Measuring Behaviour: An Introductory Guide. 4th ed., Cambridge University Press, 2021. https://doi.org/10.1017/9781108776462.</p>
+		    </div>
+		</div>
 
-"sentence2":["During the test with the #food#, the #animal# showed high #mood#."],
-"animal":["dog", "cat", "hamster", "rabbit", "mouse"],
-"toy":["ball", "string", "wheel", "tunnel", "feather"],
-"food":["carrot stick", "cheese cube", "crunchy treat", "peanut butter", "leafy green"],
-"time":["ten minutes", "one hour", "a short time", "the whole afternoon", "a few seconds"],
-"mood":["energy", "curiosity", "excitement", "sleepiness", "focus"]
-}
-function generateString(rule) {
-  return expandRule(rule);
-}
+		<script>
+			var obj = {
+				"origin": ["#sentence1#", "#sentence2#"],
+				"sentence1": ["The student watched the #animal# play with a #toy# for #time#."],
+				"sentence2": ["During the test with the #food#, the #animal# showed high #mood#."],
+				"animal": ["dog", "cat", "hamster", "rabbit", "mouse"],
+				"toy": ["ball", "string", "wheel", "tunnel", "feather"],
+				"food": ["carrot stick", "cheese cube", "crunchy treat", "peanut butter", "leafy green"],
+				"time": ["ten minutes", "one hour", "a short time", "the whole afternoon", "a few seconds"],
+				"mood": ["energy", "curiosity", "excitement", "sleepiness", "focus"]
+			};
 
-function expandRule(rule) {
-  var result = rule;
-  var match = /#(\w+(?:\.\w+)*)#/.exec(result);
-  while (match) {
-    var tag = match[1];
-    var replacement = handleTag(tag);
-    result = result.replace(match[0], replacement);
-    match = /#(\w+(?:\.\w+)*)#/.exec(result);
-  }
-  return result;
-}
+			function generateString(rule) {
+				return expandRule(rule);
+			}
 
-function handleTag(tag) {
-  var parts = tag.split('.');
-  var key = parts[0];
-  var modifiers = parts.slice(1);
-  
-  if (!obj[key]) return "#" + tag + "#";
-  
-  var selected = obj[key][Math.floor(Math.random() * obj[key].length)];
-  var result = expandRule(selected);
-  
-  // Apply modifiers
-  if (modifiers.includes('capitalize') && result.length > 0) {
-    result = result.charAt(0).toUpperCase() + result.slice(1);
-  }
-  
-  return result;
-}
+			function expandRule(rule) {
+				var result = rule;
+				var match = /#(\w+(?:\.\w+)*)#/.exec(result);
+				while (match) {
+					var tag = match[1];
+					var replacement = handleTag(tag);
+					result = result.replace(match[0], replacement);
+					match = /#(\w+(?:\.\w+)*)#/.exec(result);
+				}
+				return result;
+			}
 
-function displayString() {
-    var randomIndex = Math.floor(Math.random() * obj.origin.length);
-    document.getElementById('text-container').innerHTML = generateString(obj.origin[randomIndex]);
-}
+			function handleTag(tag) {
+				var parts = tag.split('.');
+				var key = parts[0];
+				var modifiers = parts.slice(1);
+				
+				if (!obj[key]) return "#" + tag + "#";
+				
+				var selected = obj[key][Math.floor(Math.random() * obj[key].length)];
+				var result = expandRule(selected);
+				
+				if (modifiers.includes('capitalize') && result.length > 0) {
+					result = result.charAt(0).toUpperCase() + result.slice(1);
+				}
+				
+				return result;
+			}
 
-    displayString();  // call once at the beginning
-    setInterval(displayString, 30000);  // call every 30 seconds
-            // Get the modal
-            var modal = document.getElementById("myModal");
+			function displayString() {
+				var randomIndex = Math.floor(Math.random() * obj.origin.length);
+				document.getElementById('text-container').innerHTML = generateString(obj.origin[randomIndex]);
+			}
 
-            // Get the <span> element that closes the modal
-            var span = document.getElementsByClassName("close")[0];
+			displayString();  // Call once at the beginning
+			setInterval(displayString, 30000);  // Call every 30 seconds
 
-            // When the user clicks on <span> (x), close the modal
-            span.onclick = function() {
-                modal.style.display = "none";
-            }
+			var modal = document.getElementById("myModal");
+			var span = document.getElementsByClassName("close")[0];
 
-            // When the user clicks anywhere outside of the modal, close it
-            window.onclick = function(event) {
-                if (event.target == modal) {
-                    modal.style.display = "none";
-                }
-            }
+			span.onclick = function() {
+				modal.style.display = "none";
+			}
 
-            // Function to display the about modal
-            function displayAbout() {
-                modal.style.display = "block";
-            }
-		    function goFullscreen() {
-        if (document.documentElement.requestFullscreen) {
-            document.documentElement.requestFullscreen();
-        } else if (document.documentElement.mozRequestFullScreen) { // Firefox
-            document.documentElement.mozRequestFullScreen();
-        } else if (document.documentElement.webkitRequestFullscreen) { // Chrome, Safari and Opera
-            document.documentElement.webkitRequestFullscreen();
-        } else if (document.documentElement.msRequestFullscreen) { // IE/Edge
-            document.documentElement.msRequestFullscreen();
-        }
-    }
+			window.onclick = function(event) {
+				if (event.target == modal) {
+					modal.style.display = "none";
+				}
+			}
 
-    
-</script>
+			function displayAbout() {
+				modal.style.display = "block";
+			}
 
-
-<iframe id="IgP8dKVP" frameborder="0" src="./grammar2_files/translateSandbox.html" style="width: 0px; height: 0px; display: none;"></iframe></body></html>
+			function goFullscreen() {
+				if (document.documentElement.requestFullscreen) {
+					document.documentElement.requestFullscreen();
+				} else if (document.documentElement.mozRequestFullScreen) {
+					document.documentElement.mozRequestFullScreen();
+				} else if (document.documentElement.webkitRequestFullscreen) {
+					document.documentElement.webkitRequestFullscreen();
+				} else if (document.documentElement.msRequestFullscreen) {
+					document.documentElement.msRequestFullscreen();
+				}
+			}
+		</script>
+	</body>
+</html>
